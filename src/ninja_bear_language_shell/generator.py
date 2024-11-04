@@ -1,6 +1,5 @@
-from typing import Dict, List, overload
-from ninja_bear import GeneratorBase, Property, PropertyType, NamingConventionType, DumpInfo
-from ninja_bear.base.generator_configuration import GeneratorConfiguration
+from typing import overload
+from ninja_bear import GeneratorBase, PropertyType, NamingConventionType, DumpInfo
 
 
 class Generator(GeneratorBase):
