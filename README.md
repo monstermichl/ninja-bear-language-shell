@@ -1,6 +1,7 @@
 # ninja-bear-language-shell
 This [ninja-bear](https://pypi.org/project/ninja-bear) plugin adds support for Unix shell scripts. To use the constants in your code, use the *source*-command (e.g. source test_config.sh).
 
+## Example configuration
 ```yaml
 languages:
   # -------------------------------------------------------------------------
@@ -60,4 +61,17 @@ properties:
     name: mySubstitutedString
     value: Sometimes I just want to scream ${myString}!  # To use the value of another property, simply use its name with ${}. E.g., ${myString}.
 
+```
+
+## Example output
+```sh
+#!/bin/sh
+
+TEST_CONFIG_MY_BOOLEAN=1
+TEST_CONFIG_MY_INTEGER=142
+TEST_CONFIG_MY_FLOAT=322.0
+TEST_CONFIG_MY_COMBINED_FLOAT=45724.0
+TEST_CONFIG_MY_DOUBLE=233.9
+TEST_CONFIG_MY_REGEX="Test Reg(E|e)x" # Just another RegEx.
+TEST_CONFIG_MY_SUBSTITUTED_STRING="Sometimes I just want to scream Hello World!"
 ```
